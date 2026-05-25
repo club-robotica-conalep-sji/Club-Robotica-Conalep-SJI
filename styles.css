@@ -1,4 +1,5 @@
 * {
+    margin: 0;
     mask-origin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,6 +12,7 @@ body {
 }
 
 header {
+    background-color: #333;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
@@ -19,16 +21,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .logo{
     font-size: 1.5rem;
     font-weight: bold;
-    color: #333;
+    color: white;
 }
-
 .nav-links{
     display: flex;
     list-style: none;
@@ -37,7 +36,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: 500;
 }
 

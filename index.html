@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Robótica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Club Robótica</div>
+
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <h1>Dónde tus ideas se hacen realidad...</h1>
+
+            <p>
+                Encuentra con nosotros ese accesorio,
+                proyecto, figura e idea que tanto buscas!!!
+            </p>
+
+            <button class="cta-button">
+                Ver impresiones
+            </button>
+        </section>
+
+        <section id="proyectos">
+
+            <h2>Proyectos destacados</h2>
+
+            <div class="proyectos-grid">
+
+                <!-- TARJETA 1 -->
+                <div class="propiedad-card">
+
+                    <img src="img/propiedad2.jpg"
+                    alt="Caja porta circuito en ProtoBoard personalizable">
+
+                    <h3>
+                        Transporta tus circuitos de forma segura
+                        con tu estilo!!!
+                    </h3>
+
+                    <p class="precio oculto">
+                        $120 MXN
+                    </p>
+
+                    <p class="descricion oculto">
+                        Contenedor para circuitos en ProtoBoard personalizable
+                    </p>
+
+                    <button onclick="mostrarDetalles(this)">
+                        Ver detalles
+                    </button>
+
+                </div>
+
+                <!-- TARJETA 2 -->
+                <div class="propiedad-card">
+
+                    <img src="img/propiedad3.png"
+                    alt="Contenedor Arduino">
+
+                    <h3>
+                        ¿Por qué llevar tu Arduino al descubierto
+                        cuando lo puedes llevar protegido de forma muy mona?
+                    </h3>
+
+                    <p class="precio oculto">
+                        $150 MXN
+                    </p>
+
+                    <p class="descricion oculto">
+                        Contenedor para Arduino UNO y Mini Proto
+                        con tapa personalizable
+                    </p>
+
+                    <button onclick="mostrarDetalles(this)">
+                        Ver detalles
+                    </button>
+
+                </div>
+
+                <!-- TARJETA 3 -->
+                <div class="propiedad-card">
+
+                    <img src="img/propiedad5.jpeg"
+                    alt="Figura de Gengar">
+
+                    <h3>
+                        Atrápalos a todos con tu compañero Pokémon:
+                        Gengar!!!
+                    </h3>
+
+                    <p class="precio oculto">
+                        $65 MXN
+                    </p>
+
+                    <p class="descricion oculto">
+                        Figura a escala del Pokémon Gengar
+                    </p>
+
+                    <button onclick="mostrarDetalles(this)">
+                        Ver detalles
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="contacto">
+
+    <h2>Contacto</h2>
+
+    <form action="https://formspree.io/f/mredaoqd" method="POST">
+
+        <input type="hidden" name="_captcha" value="false">
+
+        <input 
+        type="text" 
+        name="nombre" 
+        placeholder="Nombre" 
+        required>
+
+        <input 
+        type="email" 
+        name="email" 
+        placeholder="Email" 
+        required>
+
+        <textarea 
+        name="mensaje" 
+        placeholder="Mensaje" 
+        required></textarea>
+
+        <button type="submit">
+            Enviar
+        </button>
+
+    </form>
+
+</section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; Club Robótica de Conalep SJI.
+            Todos los derechos reservados
+        </p>
+    </footer>
+
+    <script>
+
+        function mostrarDetalles(boton){
+
+            let tarjeta = boton.parentElement;
+
+            let precio = tarjeta.querySelector(".precio");
+            let descripcion = tarjeta.querySelector(".descricion");
+
+            precio.classList.toggle("oculto");
+            descripcion.classList.toggle("oculto");
+
+        }
+
+    </script>
+
+</body>
+</html>
